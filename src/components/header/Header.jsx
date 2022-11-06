@@ -1,22 +1,30 @@
 import React from 'react'
 import css from './Header.module.css'
 import Logo from '../../assets/logo.png'
+import { CgShoppingBag } from 'react-icons/cg'
 
 const Header = () => {
     return (
         <div className={css.container}>
             <div className={css.logo}>
-                <img src={Logo} alt="" />
+                <img src={Logo} alt="company name" />
                 <span>Company Name</span>
             </div>
 
             <div className={css.right}>
-                <div className={css.menu}></div>
+                <div className={css.menu}>
+                    <ul className={css.menu}>
+                        <li>Collections</li>
+                        <li>Brands</li>
+                        <li>New</li>
+                        <li>Sales</li>
+                        <li>ENG</li>
+                    </ul>
+                </div>
+                <input type="text" placeholder='search here' className={css.search} />
+
+                <CgShoppingBag className={css.cart} />
             </div>
-
-            <input type="text" className={css.search} />
-
-            <span>PNG icon for cart</span>
         </div>
     )
 }
